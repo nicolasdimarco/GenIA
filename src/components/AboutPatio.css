@@ -1,0 +1,123 @@
+.patio {
+  background: var(--color-bg);
+}
+
+.patio__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.patio__info .badge {
+  margin-bottom: 1rem;
+}
+
+.patio__info h2 {
+  margin-bottom: 1.5rem;
+}
+
+.patio__lead {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.patio__lead strong {
+  color: var(--color-green);
+}
+
+.patio__body {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* Stats row */
+.patio__stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.patio__stat {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+}
+
+.patio__stat-n {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  color: var(--color-green);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.patio__stat-l {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Strengths */
+.patio__strengths {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.patio__strength-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 1.25rem;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.patio__strength-card:hover {
+  border-color: rgba(91, 241, 117, 0.3);
+  transform: translateX(4px);
+}
+
+.patio__strength-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.patio__strength-title {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+.patio__strength-desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .patio__layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .patio__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+

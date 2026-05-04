@@ -5,27 +5,27 @@ const STEPS = [
   {
     number: '01',
     title: 'Diagnóstico',
-    text: 'Evaluación de procesos, infraestructura y calidad de datos. Identificamos casos de uso prioritarios y el punto de partida real de tu organización.',
+    text: 'Evaluación de procesos, infraestructura y calidad de datos.',
   },
   {
     number: '02',
     title: 'Implementación',
-    text: 'Stack personalizado con bases de conocimiento propio. Cada componente elegido en función de tus necesidades, no de las del proveedor.',
+    text: 'Stack personalizado con bases de conocimiento propio.',
   },
   {
     number: '03',
     title: 'Piloto Controlado',
-    text: 'Implementación de "Quick Wins" para generar confianza interna y demostrar valor concreto antes de escalar a toda la organización.',
+    text: 'Implementación de "Quick Wins" para generar confianza interna y demostrar valor antes de escalar la solución.',
   },
   {
     number: '04',
     title: 'Desarrollo y Automatización',
-    text: 'Creación de agentes autónomos y aplicativos a medida. IA que se integra con tus sistemas, documentos y flujos de trabajo existentes.',
+    text: 'Creación de agentes autónomos y aplicativos a medida.',
   },
   {
     number: '05',
     title: 'Acompañamiento Continuo',
-    text: 'Actualización y optimización continua por arquitectos de IA que están en la frontera del conocimiento. Tu equipo crece con nosotros.',
+    text: 'Actualización y optimización continua por arquitectos de IA que están en la frontera del conocimiento.',
   },
 ]
 
@@ -50,7 +50,7 @@ export default function WhatIsGenIA() {
 
           <div className="whatis__card">
             <h3 className="whatis__card-title">
-              <LuMap size={20} aria-hidden="true" /> Nuestro roadmap de madurez
+              <LuMap size={20} aria-hidden="true" /> Nuestro roadmap
             </h3>
             <ul className="whatis__list" role="list">
               {STEPS.map((s) => (

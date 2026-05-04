@@ -2,34 +2,10 @@ import './HowItWorks.css'
 
 const STACK = [
   {
-    layer: 'Capa 7 · Interfaz',
+    layer: 'Capa 1 · Hardware',
     color: 'blue',
-    tools: ['OpenWebUI'],
-    description: 'Acceso amigable, chat y herramientas RAG para toda la organización.',
-  },
-  {
-    layer: 'Capa 6 · Orquestación',
-    color: 'green',
-    tools: ['Langflow', 'MCP'],
-    description: 'Gestión de agentes y flujos de trabajo complejos. Automatización sin código.',
-  },
-  {
-    layer: 'Capa 5 · Aplicativos',
-    color: 'blue',
-    tools: ['Page Assist', 'M.A.I.D (mobile)', 'OpenCode'],
-    description: 'IA integrada en el navegador, dispositivos móviles y entornos de desarrollo.',
-  },
-  {
-    layer: 'Capa 4 · Modelos',
-    color: 'green',
-    tools: ['Llama 3.1', 'DeepSeek', 'Mistral', 'Phi-3', 'Qwen', 'Gemma'],
-    description: 'El "motor" de razonamiento: LLMs de clase mundial, abiertos y auditables. Sin cajas negras.',
-  },
-  {
-    layer: 'Capa 3 · Gestión',
-    color: 'blue',
-    tools: ['Ollama'],
-    description: 'Administración eficiente de los pesos de los modelos. Actualización y control local.',
+    tools: ['Diagnóstico y recomendación a medida'],
+    description: 'GPUs NVIDIA (H100/A100) o setups optimizados. Físico o cloud privado según tu caso.',
   },
   {
     layer: 'Capa 2 · Motor de Inferencia',
@@ -38,10 +14,34 @@ const STACK = [
     description: 'Inferencia optimizada para máximo rendimiento en CPU y GPU propias.',
   },
   {
-    layer: 'Capa 1 · Hardware',
+    layer: 'Capa 3 · Gestión',
     color: 'blue',
-    tools: ['Diagnóstico y recomendación a medida'],
-    description: 'GPUs NVIDIA (H100/A100) o setups optimizados. Físico o cloud privado según tu caso.',
+    tools: ['Ollama'],
+    description: 'Administración eficiente de los pesos de los modelos. Actualización y control local.',
+  },
+  {
+    layer: 'Capa 4 · Modelos',
+    color: 'green',
+    tools: ['Llama 3.1', 'DeepSeek', 'Mistral', 'Phi-3', 'Qwen', 'Gemma'],
+    description: 'El "motor" de razonamiento: LLMs de clase mundial, abiertos y auditables. Sin cajas negras.',
+  },
+  {
+    layer: 'Capa 5 · Aplicativos',
+    color: 'blue',
+    tools: ['Page Assist', 'M.A.I.D (mobile)', 'OpenCode'],
+    description: 'IA integrada en el navegador, dispositivos móviles y entornos de desarrollo.',
+  },
+  {
+    layer: 'Capa 6 · Orquestación',
+    color: 'green',
+    tools: ['Langflow', 'MCP'],
+    description: 'Gestión de agentes y flujos de trabajo complejos. Automatización sin código.',
+  },
+  {
+    layer: 'Capa 7 · Interfaz',
+    color: 'blue',
+    tools: ['OpenWebUI'],
+    description: 'Acceso amigable, chat y herramientas RAG para toda la organización.',
   },
   {
     layer: 'Transversal · Observabilidad',
@@ -57,7 +57,7 @@ export default function HowItWorks() {
       <div className="container">
         <div className="section-header">
           <span className="badge badge--blue">AI Open Stack</span>
-          <h2 id="howit-heading">Arquitectura: transparencia radical</h2>
+          <h2 id="howit-heading">Arquitectura libre</h2>
           <p>
             Construimos sobre estándares abiertos. Cada capa es auditable, reemplazable
             y de tu propiedad. Sin vendor lock-in. Sin cajas negras.

@@ -39,7 +39,7 @@ export default function Sovereignty() {
         <div className="section-header">
           <span className="badge badge--blue">Retorno de Inversión</span>
           <h2 id="sovereignty-heading">
-            Una estrategia propia de IA no es un gasto,{' '}
+            Una estrategia propia de IA no es un gasto,{' '} <br />
             <span className="sovereignty__accent">es un activo financiero</span>
           </h2>
           <p>

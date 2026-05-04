@@ -3,13 +3,6 @@ import './Benefits.css'
 
 const USE_CASES = [
   {
-    Icon: LuPlane,
-    title: 'Navegación Aeronáutica',
-    description: 'Gestión de tráfico aéreo con IA explicable (XAI) y copilotos de mantenimiento predictivo. Manuales técnicos y procedimientos consultables sin que el dato salga de la red.',
-    color: 'blue',
-    tag: 'EANA · Aerolíneas',
-  },
-  {
     Icon: LuFileText,
     title: 'Registros Cívicos',
     description: 'Automatización de trámites ciudadanos con OCR avanzado y validación de identidad biométrica local. Procesamiento de documentos sin exposición a servicios externos.',

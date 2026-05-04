@@ -1,7 +1,7 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Problem from './components/Problem'
-import WhatIsBestIA from './components/WhatIsBestIA'
+import WhatIsGenIA from './components/WhatIsGenIA'
 import HowItWorks from './components/HowItWorks'
 import Benefits from './components/Benefits'
 import Sovereignty from './components/Sovereignty'
@@ -19,10 +19,10 @@ export default function App() {
       <main id="main-content">
         <Hero />
         <Problem />
-        <WhatIsBestIA />
+        <WhatIsGenIA />
+        <Sovereignty />
         <HowItWorks />
         <Benefits />
-        <Sovereignty />
         <AboutPatio />
         <CTA />
       </main>

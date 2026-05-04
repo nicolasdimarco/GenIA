@@ -2,40 +2,52 @@ import './HowItWorks.css'
 
 const STACK = [
   {
-    layer: 'Interfaz',
+    layer: 'Capa 7 · Interfaz',
     color: 'blue',
-    tools: ['OpenWebUI (RAG + Tools)', 'Page Assist (plugin)', 'M.A.I.D (mobile)'],
-    description: 'Interfaces de chat multimodal con soporte para documentos, herramientas y uso móvil.',
+    tools: ['OpenWebUI'],
+    description: 'Acceso amigable, chat y herramientas RAG para toda la organización.',
   },
   {
-    layer: 'Agentes',
+    layer: 'Capa 6 · Orquestación',
     color: 'green',
-    tools: ['OpenCode', 'Langflow', 'MCP'],
-    description: 'Agentes autónomos para automatización de tareas, código y flujos de trabajo complejos.',
+    tools: ['Langflow', 'MCP'],
+    description: 'Gestión de agentes y flujos de trabajo complejos. Automatización sin código.',
   },
   {
-    layer: 'Modelos',
+    layer: 'Capa 5 · Aplicativos',
     color: 'blue',
-    tools: ['Qwen', 'DeepSeek', 'Phi-3', 'Mistral', 'Gemma', 'LLaMA'],
-    description: 'Modelos de lenguaje abiertos y auditables. Sin cajas negras, sin dependencia de APIs externas.',
+    tools: ['Page Assist', 'M.A.I.D (mobile)', 'OpenCode'],
+    description: 'IA integrada en el navegador, dispositivos móviles y entornos de desarrollo.',
   },
   {
-    layer: 'Inferencia',
+    layer: 'Capa 4 · Modelos',
     color: 'green',
-    tools: ['Llama.cpp (CPU + GPU)', 'Ollama'],
-    description: 'Motor de inferencia optimizado que corre en hardware propio, con gestión de modelos local.',
+    tools: ['Llama 3.1', 'DeepSeek', 'Mistral', 'Phi-3', 'Qwen', 'Gemma'],
+    description: 'El "motor" de razonamiento: LLMs de clase mundial, abiertos y auditables. Sin cajas negras.',
   },
   {
-    layer: 'Observabilidad',
+    layer: 'Capa 3 · Gestión',
     color: 'blue',
+    tools: ['Ollama'],
+    description: 'Administración eficiente de los pesos de los modelos. Actualización y control local.',
+  },
+  {
+    layer: 'Capa 2 · Motor de Inferencia',
+    color: 'green',
+    tools: ['Llama.cpp'],
+    description: 'Inferencia optimizada para máximo rendimiento en CPU y GPU propias.',
+  },
+  {
+    layer: 'Capa 1 · Hardware',
+    color: 'blue',
+    tools: ['Diagnóstico y recomendación a medida'],
+    description: 'GPUs NVIDIA (H100/A100) o setups optimizados. Físico o cloud privado según tu caso.',
+  },
+  {
+    layer: 'Transversal · Observabilidad',
+    color: 'green',
     tools: ['LangFuse'],
-    description: 'Trazabilidad completa de cada interacción. Auditá, medí y optimizá el uso de IA.',
-  },
-  {
-    layer: 'Hardware',
-    color: 'green',
-    tools: ['2× GPU RTX 3090 24GB'],
-    description: 'Infraestructura propia escalable. Más capacidad cuando la necesitás, sin costos variables.',
+    description: 'Trazabilidad total de cada respuesta. Auditá, medí y optimizá el uso de IA con datos reales.',
   },
 ]
 
@@ -44,11 +56,11 @@ export default function HowItWorks() {
     <section id="como-funciona" className="howit" aria-labelledby="howit-heading">
       <div className="container">
         <div className="section-header">
-          <span className="badge badge--blue">Cómo Funciona</span>
-          <h2 id="howit-heading">El stack abierto de BestIA</h2>
+          <span className="badge badge--blue">AI Open Stack</span>
+          <h2 id="howit-heading">Arquitectura: transparencia radical</h2>
           <p>
-            Cada capa usa herramientas open-source probadas en producción.
-            Sin vendor lock-in. Sin cajas negras.
+            Construimos sobre estándares abiertos. Cada capa es auditable, reemplazable
+            y de tu propiedad. Sin vendor lock-in. Sin cajas negras.
           </p>
         </div>
 

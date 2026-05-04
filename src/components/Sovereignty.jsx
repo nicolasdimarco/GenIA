@@ -1,29 +1,29 @@
 import './Sovereignty.css'
 
-const PILLARS = [
+const ROI_ITEMS = [
   {
     number: '01',
-    title: 'Soberanía de datos',
-    body: 'Tus datos nunca abandonan tu infraestructura. No hay transferencias a servidores de terceros, no hay uso de tu información para entrenar otros modelos. Control absoluto sobre lo que entra, lo que se procesa y lo que se almacena.',
+    title: 'Menos Costos Operativos',
+    body: 'Los proyectos de automatización suelen alcanzar el punto de equilibrio (break-even) en menos de 6 meses. Cada proceso automatizado libera tiempo y reduce costos fijos de forma permanente.',
     color: 'blue',
+    metric: '< 6 meses',
+    metricLabel: 'hasta el break-even',
   },
   {
     number: '02',
-    title: 'Soberanía de infraestructura',
-    body: 'Vos elegís dónde corre la IA: en tu hardware, en un servidor privado o en una nube que controlás. Sin dependencia de plataformas cloud de terceros. Sin interrupciones por decisiones ajenas.',
+    title: 'Ahorro en Inferencia',
+    body: 'Una vez amortizado el hardware, el costo marginal por consulta es efectivamente cero. Sin suscripciones mensuales por usuario ni costos por token que escalen con el uso.',
     color: 'green',
+    metric: '≈ $0',
+    metricLabel: 'costo marginal por consulta',
   },
   {
     number: '03',
-    title: 'Soberanía tecnológica',
-    body: 'Todo el stack es open-source y auditable. Podés inspeccionar, modificar y extender cada componente. La tecnología trabaja para vos, no para los intereses de una corporación.',
+    title: 'Eficiencia y Productividad',
+    body: 'Latencia reducida, sin dependencias externas y disponibilidad continua para procesos críticos. Automatizá con mayor velocidad, estabilidad y control sin trasladar eficiencia a terceros.',
     color: 'blue',
-  },
-  {
-    number: '04',
-    title: 'Independencia estratégica',
-    body: 'Cuando no dependés de Big Tech para tu IA, tampoco dependés de sus cambios de precio, sus términos de servicio o sus decisiones de producto. Tu hoja de ruta la definís vos.',
-    color: 'green',
+    metric: '100%',
+    metricLabel: 'control de disponibilidad',
   },
 ]
 
@@ -37,34 +37,29 @@ export default function Sovereignty() {
 
       <div className="container">
         <div className="section-header">
-          <span className="badge badge--blue">Por Qué la Soberanía Importa</span>
+          <span className="badge badge--blue">Retorno de Inversión</span>
           <h2 id="sovereignty-heading">
-            Tu infraestructura de IA es{' '}
-            <span className="sovereignty__accent">infraestructura crítica</span>
+            Una estrategia propia de IA no es un gasto,{' '}
+            <span className="sovereignty__accent">es un activo financiero</span>
           </h2>
           <p>
-            La soberanía tecnológica no es una preferencia ideológica. Es una decisión estratégica
-            con impacto real en tu seguridad, tus costos y tu independencia.
+            La IA soberana genera retornos concretos y medibles desde los primeros meses.
+            Calculá el impacto real en tu organización.
           </p>
         </div>
 
         <div className="sovereignty__pillars" role="list">
-          {PILLARS.map((p) => (
+          {ROI_ITEMS.map((p) => (
             <article key={p.number} className={`sovereignty__pillar sovereignty__pillar--${p.color}`} role="listitem">
-              <div className="sovereignty__number" aria-hidden="true">{p.number}</div>
+              <div className="sovereignty__roi-metric">
+                <span className="sovereignty__roi-number">{p.metric}</span>
+                <span className="sovereignty__roi-label">{p.metricLabel}</span>
+              </div>
               <h3 className="sovereignty__pillar-title">{p.title}</h3>
               <p className="sovereignty__pillar-body">{p.body}</p>
             </article>
           ))}
         </div>
-
-        <blockquote className="sovereignty__quote">
-          <p>
-            "La tecnología debería ser privada, centrada en las personas y lista para lanzar.
-            Los datos deben ser de quien los genera."
-          </p>
-          <cite>— Principios de Patio Community</cite>
-        </blockquote>
       </div>
     </section>
   )

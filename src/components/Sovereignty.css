@@ -91,6 +91,35 @@
   opacity: 0.3;
 }
 
+.sovereignty__roi-metric {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.sovereignty__roi-number {
+  font-size: var(--font-size-4xl);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.2rem;
+}
+
+.sovereignty__pillar--blue .sovereignty__roi-number {
+  color: var(--color-blue);
+}
+
+.sovereignty__pillar--green .sovereignty__roi-number {
+  color: var(--color-green);
+}
+
+.sovereignty__roi-label {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
 .sovereignty__pillar-title {
   font-size: var(--font-size-xl);
   font-weight: 700;

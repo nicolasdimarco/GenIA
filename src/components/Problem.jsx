@@ -1,29 +1,30 @@
+import { LuScale, LuTrendingUp, LuShieldOff, LuLock, LuCompass } from 'react-icons/lu'
 import './Problem.css'
 
 const PROBLEMS = [
   {
-    icon: '🔓',
-    title: 'Tus datos financian a otros',
+    Icon: LuScale,
+    title: 'Riesgo Legal',
     description:
-      'Cada prompt que enviás a ChatGPT o Copilot entrena los modelos de empresas privadas. Tu conocimiento interno, tus estrategias, tus datos confidenciales: todos contribuyen al capital intelectual de Big Tech.',
+      'Utilizando herramientas mainstream de proveedores externos, tus datos están sujetos a la legislación local de donde se encuentren los servidores físicos que contratas, que permite a autoridades extranjeras acceder a tu información confidencial sin notificarte.',
   },
   {
-    icon: '📈',
-    title: 'Costos que escalan sin control',
+    Icon: LuTrendingUp,
+    title: 'Riesgo presupuestario',
     description:
-      'Las APIs de IA propietaria tienen precios que crecen con el uso. A medida que tu equipo adopta más herramientas, la factura crece exponencialmente — y dependés de decisiones de precios que no controlás.',
+      'Los modelos de pago por token conllevan un costo impredecible porque escalan exponencialmente con el uso. A mayor adopción, mayor dependencia y mayor costo, sin que puedas controlarlo.',
   },
   {
-    icon: '🔒',
-    title: 'Sin soberanía sobre tu infraestructura',
+    Icon: LuShieldOff,
+    title: 'Exfiltración de datos',
     description:
-      'Si el proveedor cambia sus términos, sube precios o cierra el servicio, tu operación se detiene. La dependencia tecnológica es un riesgo real que pocas organizaciones evalúan hasta que es demasiado tarde.',
+      'El 93% de los empleados suele pegar información sensible de la empresa en herramientas de IA externas. Estrategias, datos de clientes, código propietario: todo sale de tu organización sin dejar rastro.',
   },
   {
-    icon: '⚠️',
-    title: 'Riesgos regulatorios y de compliance',
+    Icon: LuLock,
+    title: 'Dependencia total del proveedor',
     description:
-      'GDPR, LGPD, y regulaciones sectoriales exigen saber dónde están tus datos y quién los procesa. Los servicios cloud de terceros generan zonas grises legales que pueden costarte muy caro.',
+      'Si tu proveedor cambia los términos, aumenta los precios o discontinúa el servicio, tu operación queda rehén. Una decisión ajena puede paralizar procesos críticos de tu organización de un día para el otro.',
   },
 ]
 
@@ -32,12 +33,13 @@ export default function Problem() {
     <section id="problema" className="problem" aria-labelledby="problem-heading">
       <div className="container">
         <div className="section-header">
-          <span className="badge badge--blue">El Problema</span>
+          <span className="badge badge--blue">El Problema que Resolvemos</span>
           <h2 id="problem-heading">
-            Depender de Big Tech no es neutral
+            ¿Tu organización navega sin brújula la adopción de IA?
           </h2>
           <p>
-            Usar herramientas de IA propietaria tiene costos que van mucho más allá de la factura mensual.
+            Incorporar IA sin una estrategia clara expone a tu organización a riesgos legales,
+            presupuestarios y operativos que pocas veces se evalúan antes de que sea demasiado tarde.
           </p>
         </div>
 
@@ -48,7 +50,7 @@ export default function Problem() {
               className="problem__card"
               role="listitem"
             >
-              <div className="problem__icon" aria-hidden="true">{item.icon}</div>
+              <div className="problem__icon" aria-hidden="true"><item.Icon size={32} /></div>
               <h3 className="problem__title">{item.title}</h3>
               <p className="problem__desc">{item.description}</p>
             </article>
@@ -57,9 +59,7 @@ export default function Problem() {
 
         <div className="problem__callout" role="note">
           <p>
-            <strong>La realidad es simple:</strong> si no controlás tu infraestructura de IA, alguien más
-            controla tus datos. Y con ellos, una parte de tu estrategia, tu ventaja competitiva y la
-            privacidad de tus clientes.
+            <strong>Sin estrategia propia, sin competitividad</strong> No contar con una estrategia de IA organizada es en sí mismo un riesgo. Diseñemos tu estrategia.
           </p>
         </div>
       </div>

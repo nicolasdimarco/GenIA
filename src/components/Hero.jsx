@@ -11,21 +11,22 @@ export default function Hero() {
 
       <div className="container hero__content">
         <div className="hero__badge-wrap">
-          <span className="badge badge--blue">Open Source · Cooperativo · Soberano</span>
+          <span className="badge badge--blue">Self-hosted · Open Source</span>
         </div>
 
         <h1 id="hero-heading" className="hero__title">
-          IA que trabaja para vos,{' '}
-          <span className="hero__title-accent">no para Big Tech</span>
+          IA Soberana
         </h1>
-
+        <h2>
+          Sin suscripciones mensuales por usuario <br/> ni costos por token.
+        </h2>
         <p className="hero__subtitle">
-          BestIA es la alternativa open-source a ChatGPT, Copilot y Poe.
-          Dos años de experiencia real construyendo IA que <strong>corre en tu infraestructura</strong>,
-          protege tus datos y escala con tu organización.
+          Implementamos estrategias de Inteligencia Artificial self-hosted con tecnología Open Source.
+          Sin dependencia de proveedores, <strong>sin fugas de datos</strong> y con{' '}
+          <strong>infraestructura 100% propia</strong>.
         </p>
 
-        <div className="hero__stats" role="list" aria-label="Estadísticas de Patio">
+{/*         <div className="hero__stats" role="list" aria-label="Estadísticas de Patio">
           <div role="listitem" className="hero__stat">
             <span className="hero__stat-number">117+</span>
             <span className="hero__stat-label">Cooperativas</span>
@@ -42,11 +43,11 @@ export default function Hero() {
             <span className="hero__stat-number">100%</span>
             <span className="hero__stat-label">Open Source</span>
           </div>
-        </div>
+        </div> */}
 
         <div className="hero__actions">
           <a href="#contacto" className="btn btn--primary">
-            Empezá tu transición
+            Diseñá tu estrategia
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>

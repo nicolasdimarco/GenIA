@@ -1,53 +1,41 @@
+import { LuPlane, LuFileText, LuActivity, LuReceipt, LuServer } from 'react-icons/lu'
 import './Benefits.css'
 
-const BENEFITS = [
+const USE_CASES = [
   {
-    icon: '🎨',
-    title: 'Multimodalidad real',
-    description: 'Texto, código, imágenes y audio en un mismo stack. IA que resuelve tareas complejas sin saltar entre herramientas.',
+    Icon: LuPlane,
+    title: 'Navegación Aeronáutica',
+    description: 'Gestión de tráfico aéreo con IA explicable (XAI) y copilotos de mantenimiento predictivo. Manuales técnicos y procedimientos consultables sin que el dato salga de la red.',
     color: 'blue',
+    tag: 'EANA · Aerolíneas',
   },
   {
-    icon: '💰',
-    title: 'Reducción de costos',
-    description: 'Modelos abiertos en hardware propio. El costo marginal de cada consulta se acerca a cero una vez instalado.',
+    Icon: LuFileText,
+    title: 'Registros Cívicos',
+    description: 'Automatización de trámites ciudadanos con OCR avanzado y validación de identidad biométrica local. Procesamiento de documentos sin exposición a servicios externos.',
     color: 'green',
+    tag: 'Estado · Municipios',
   },
   {
-    icon: '🔐',
-    title: 'Control total',
-    description: 'Tus datos nunca salen de tu infraestructura. Seguridad robusta y control de acceso granular en todo el stack.',
+    Icon: LuActivity,
+    title: 'Salud y Obras Sociales',
+    description: 'Auditoría médica inteligente y control de sobreprestación para blindar los recursos. Historial clínico consultable bajo jurisdicción local y cumplimiento normativo total.',
     color: 'blue',
+    tag: 'Hospitales · OOSS',
   },
   {
-    icon: '📈',
-    title: 'Arquitectura escalable',
-    description: 'Empezá chico y escalá. GPU y memoria on-demand. Adaptado a tu crecimiento, no al de los planes del proveedor.',
+    Icon: LuReceipt,
+    title: 'Jubilaciones y Pensiones',
+    description: 'Cálculos actuariales dinámicos y combate al fraude de "pensionistas fantasma". IA que procesa datos sensibles sin que ningún byte cruce fronteras.',
     color: 'green',
+    tag: 'ANSES · Cajas',
   },
   {
-    icon: '🤖',
-    title: 'Agentes autónomos',
-    description: 'Automatizá tareas internas con agentes que integran tus sistemas, documentos y flujos de trabajo existentes.',
+    Icon: LuServer,
+    title: 'Sistemas Legado',
+    description: 'Modernización de lógica en COBOL/DB2 sin que el código salga de tu red. Documentación automática, refactorización asistida y migración controlada.',
     color: 'blue',
-  },
-  {
-    icon: '🔗',
-    title: 'Interoperabilidad',
-    description: 'APIs estándar que se integran con tu stack actual. Compatible con los principales frameworks y herramientas open-source.',
-    color: 'green',
-  },
-  {
-    icon: '📚',
-    title: 'RAG con datos propios',
-    description: 'Consultá documentos internos, wikis y bases de conocimiento. IA que sabe lo que sabe tu organización.',
-    color: 'blue',
-  },
-  {
-    icon: '👁️',
-    title: 'Observabilidad total',
-    description: 'Trazabilidad completa de cada interacción. Auditá, medí el impacto y optimizá el uso de IA con datos reales.',
-    color: 'green',
+    tag: 'Banca · Industria',
   },
 ]
 
@@ -56,17 +44,18 @@ export default function Benefits() {
     <section id="beneficios" className="benefits" aria-labelledby="benefits-heading">
       <div className="container">
         <div className="section-header">
-          <span className="badge badge--green">Beneficios Clave</span>
-          <h2 id="benefits-heading">Todo lo que ganás al adoptar BestIA</h2>
+          <span className="badge badge--green">Casos de Uso</span>
+          <h2 id="benefits-heading">Soluciones específicas para necesidades soberanas</h2>
           <p>
-            Valor concreto, probado en dos años de uso real dentro de una red de más de 117 cooperativas.
+            Sectores donde la privacidad, la regulación y la continuidad operativa no admiten compromisos.
           </p>
         </div>
 
         <div className="benefits__grid" role="list">
-          {BENEFITS.map((b) => (
+          {USE_CASES.map((b) => (
             <article key={b.title} className={`benefits__card benefits__card--${b.color}`} role="listitem">
-              <span className="benefits__icon" aria-hidden="true">{b.icon}</span>
+              <span className="benefits__icon" aria-hidden="true"><b.Icon size={32} /></span>
+              <div className="benefits__tag">{b.tag}</div>
               <h3 className="benefits__title">{b.title}</h3>
               <p className="benefits__desc">{b.description}</p>
             </article>

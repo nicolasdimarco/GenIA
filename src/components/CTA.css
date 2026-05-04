@@ -186,9 +186,10 @@
 }
 
 .cta__success-icon {
-  font-size: 3rem;
-  display: block;
+  display: flex;
+  justify-content: center;
   margin-bottom: 1rem;
+  color: var(--color-green);
 }
 
 .cta__success h3 {

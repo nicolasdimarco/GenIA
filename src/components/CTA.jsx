@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { LuCircleCheck } from 'react-icons/lu'
 import './CTA.css'
 
 export default function CTA() {
@@ -42,21 +43,22 @@ export default function CTA() {
       <div className="container">
         <div className="cta__layout">
           <div className="cta__pitch">
-            <span className="badge badge--green">Empezá Hoy</span>
+            <span className="badge badge--green">Diseñá tu Estrategia</span>
             <h2 id="cta-heading">
-              Tu transición a la IA soberana comienza con una conversación
+              La autonomía digital de tu organización comienza con un diagnóstico
             </h2>
             <p>
-              Contanos sobre tu organización y tus necesidades. Evaluamos juntos el punto de
-              partida, el stack más adecuado y cómo acelerar la adopción sin interrumpir
-              tu operación actual.
+              Evaluamos juntos tus procesos, infraestructura y necesidades. Construimos
+              el roadmap de madurez de IA adaptado a tu realidad — sin dependencias externas
+              y con retorno de inversión medible.
             </p>
 
             <ul className="cta__perks" aria-label="Qué incluye el primer contacto">
               {[
-                'Diagnóstico gratuito de tu situación actual',
-                'Propuesta de stack adaptada a tu infraestructura',
-                'Estimación real de costos y tiempos',
+                'Diagnóstico de AI Readiness sin costo',
+                'Propuesta de stack personalizado para tu infraestructura',
+                'Estimación real de ROI y tiempo de break-even',
+                'Arquitectos de IA de frontera como socios estratégicos',
                 'Sin compromiso. Sin letra chica.',
               ].map((item) => (
                 <li key={item}>
@@ -77,7 +79,7 @@ export default function CTA() {
           <div className="cta__form-wrap">
             {submitted ? (
               <div className="cta__success" role="alert" aria-live="polite">
-                <span className="cta__success-icon" aria-hidden="true">🎉</span>
+                <span className="cta__success-icon" aria-hidden="true"><LuCircleCheck size={48} /></span>
                 <h3>¡Mensaje enviado!</h3>
                 <p>Nos pondremos en contacto en las próximas 48 horas hábiles.</p>
               </div>

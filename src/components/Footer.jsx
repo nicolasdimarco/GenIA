@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container footer__inner">
         <div className="footer__brand">
           <span className="footer__logo">
-            Best<span className="footer__logo-accent">IA</span>
+            Gen<span className="footer__logo-accent">IA</span>
           </span>
           <p className="footer__tagline">
             IA soberana, construida por cooperativas.
@@ -23,7 +23,7 @@ export default function Footer() {
           <div className="footer__nav-group">
             <h3 className="footer__nav-title">Producto</h3>
             <ul role="list">
-              <li><a href="#que-es">Qué es BestIA</a></li>
+              <li><a href="#que-es">Qué es GenIA</a></li>
               <li><a href="#como-funciona">Cómo funciona</a></li>
               <li><a href="#beneficios">Beneficios</a></li>
               <li><a href="#soberania">Soberanía</a></li>

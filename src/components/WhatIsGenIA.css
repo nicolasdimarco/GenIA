@@ -78,6 +78,35 @@
   border: 1px solid rgba(91, 241, 117, 0.3);
 }
 
+.whatis__list-item--step {
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.whatis__step-num {
+  flex-shrink: 0;
+  font-size: var(--font-size-xs);
+  font-weight: 800;
+  color: var(--color-green);
+  background: rgba(91, 241, 117, 0.1);
+  border: 1px solid rgba(91, 241, 117, 0.25);
+  border-radius: 6px;
+  padding: 0.15rem 0.45rem;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+
+.whatis__step-title {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+}
+
+.whatis__step-text {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+}
+
 /* === RESPONSIVE === */
 @media (max-width: 900px) {
   .whatis__layout {

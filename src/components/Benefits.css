@@ -31,9 +31,27 @@
 }
 
 .benefits__icon {
-  display: block;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.benefits__card--blue .benefits__icon {
+  color: var(--color-blue);
+}
+
+.benefits__card--green .benefits__icon {
+  color: var(--color-green);
+}
+
+.benefits__tag {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
 }
 
 .benefits__title {

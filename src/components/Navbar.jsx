@@ -3,10 +3,10 @@ import './Navbar.css'
 
 const NAV_LINKS = [
   { href: '#problema', label: 'El Problema' },
-  { href: '#que-es', label: 'Qué es BestIA' },
-  { href: '#como-funciona', label: 'Cómo Funciona' },
-  { href: '#beneficios', label: 'Beneficios' },
-  { href: '#soberania', label: 'Soberanía' },
+  { href: '#que-es', label: 'Metodología' },
+  { href: '#soberania', label: 'ROI' },
+  { href: '#como-funciona', label: 'AI Open Stack' },
+  { href: '#beneficios', label: 'Casos de Uso' },
   { href: '#patio', label: 'Patio' },
 ]
 
@@ -25,8 +25,8 @@ export default function Navbar() {
   return (
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`} role="banner">
       <nav className="container navbar__inner" aria-label="Navegación principal">
-        <a href="#top" className="navbar__logo" aria-label="BestIA — inicio">
-          <span className="navbar__logo-text">Best<span className="navbar__logo-accent">IA</span></span>
+        <a href="#top" className="navbar__logo" aria-label="GenIA — inicio">
+          <span className="navbar__logo-text">Gen<span className="navbar__logo-accent">IA</span></span>
         </a>
 
         <button

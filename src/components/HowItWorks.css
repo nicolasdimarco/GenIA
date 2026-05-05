@@ -3,6 +3,12 @@
 }
 
 .howit__diagram {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.howit__diagram-main {
   display: grid;
   grid-template-columns: 1fr 280px;
   gap: 1.5rem;
@@ -28,12 +34,10 @@
 
 .howit__stack-label--top {
   border-bottom: 1px dashed var(--color-border);
-  margin-bottom: 0.25rem;
 }
 
 .howit__stack-label--bottom {
   border-top: 1px dashed var(--color-border);
-  margin-top: 0.25rem;
 }
 
 .howit__layer {
@@ -141,7 +145,7 @@
   position: relative;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.15) 100%), var(--color-bg-card);
   border: 1px dashed var(--color-green);
-  border-radius: var(--border-radius-lg);
+  border-radius: 4px;
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: stretch;
@@ -150,7 +154,7 @@
 .howit__transversal-ribbon {
   background: rgba(34, 197, 94, 0.08);
   border-right: 1px dashed var(--color-green);
-  border-radius: var(--border-radius-lg) 0 0 var(--border-radius-lg);
+  border-radius: 4px 0 0 4px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -176,20 +180,28 @@
 }
 
 .howit__transversal-content {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
 }
 
-.howit__transversal-sticky {
+.howit__transversal-inner {
   position: sticky;
   top: 6rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 0.75rem;
-  padding: 1.5rem;
+}
+
+.howit__transversal-inner .howit__tools {
+  justify-content: center;
 }
 
 @media (max-width: 980px) {
-  .howit__diagram {
+  .howit__diagram-main {
     grid-template-columns: 1fr;
   }
   .howit__transversal {
@@ -199,6 +211,7 @@
     flex-direction: row;
     border-right: none;
     border-bottom: 1px dashed var(--color-green);
+    border-radius: 4px 4px 0 0;
     padding: 0.5rem 1rem;
     justify-content: center;
     gap: 0.75rem;
@@ -207,9 +220,8 @@
     writing-mode: horizontal-tb;
     transform: none;
   }
-  .howit__transversal-sticky {
+  .howit__transversal-inner {
     position: static;
-    padding: 1rem 1.5rem 1.5rem;
   }
 }
 

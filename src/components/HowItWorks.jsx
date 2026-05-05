@@ -72,54 +72,56 @@ export default function HowItWorks() {
         </div>
 
         <div className="howit__diagram">
-          <div className="howit__stack" role="list" aria-label="Stack de infraestructura">
-            <div className="howit__stack-label howit__stack-label--top">Usuario final</div>
-            {[...STACK].reverse().map((item) => (
-              <article
-                key={item.num}
-                className={`howit__layer howit__layer--${item.color}`}
-                role="listitem"
-                aria-label={`Capa ${item.num} ${item.name}`}
-              >
-                <div className="howit__num" aria-hidden="true">
-                  <span className="howit__num-label">CAPA</span>
-                  <span className="howit__num-value">{item.num}</span>
-                </div>
-                <div className="howit__body">
-                  <h3 className="howit__layer-name">{item.name}</h3>
-                  <ul className="howit__tools" aria-label={`Herramientas de capa ${item.num}`}>
-                    {item.tools.map((tool) => (
+          <div className="howit__stack-label howit__stack-label--top">Usuario final</div>
+          <div className="howit__diagram-main">
+            <div className="howit__stack" role="list" aria-label="Stack de infraestructura">
+              {[...STACK].reverse().map((item) => (
+                <article
+                  key={item.num}
+                  className={`howit__layer howit__layer--${item.color}`}
+                  role="listitem"
+                  aria-label={`Capa ${item.num} ${item.name}`}
+                >
+                  <div className="howit__num" aria-hidden="true">
+                    <span className="howit__num-label">CAPA</span>
+                    <span className="howit__num-value">{item.num}</span>
+                  </div>
+                  <div className="howit__body">
+                    <h3 className="howit__layer-name">{item.name}</h3>
+                    <ul className="howit__tools" aria-label={`Herramientas de capa ${item.num}`}>
+                      {item.tools.map((tool) => (
+                        <li key={tool} className="howit__tool">{tool}</li>
+                      ))}
+                    </ul>
+                    <p className="howit__desc">{item.description}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <aside
+              className="howit__transversal"
+              aria-label={`Capa transversal de ${TRANSVERSAL.name}`}
+            >
+              <div className="howit__transversal-ribbon" aria-hidden="true">
+                <span className="howit__transversal-arrow">↕</span>
+                <span className="howit__transversal-ribbon-text">Transversal a todas las capas</span>
+                <span className="howit__transversal-arrow">↕</span>
+              </div>
+              <div className="howit__transversal-content">
+                <div className="howit__transversal-inner">
+                  <h3 className="howit__layer-name">{TRANSVERSAL.name}</h3>
+                  <ul className="howit__tools" aria-label={`Herramientas transversales`}>
+                    {TRANSVERSAL.tools.map((tool) => (
                       <li key={tool} className="howit__tool">{tool}</li>
                     ))}
                   </ul>
-                  <p className="howit__desc">{item.description}</p>
+                  <p className="howit__desc">{TRANSVERSAL.description}</p>
                 </div>
-              </article>
-            ))}
-            <div className="howit__stack-label howit__stack-label--bottom">Infraestructura física</div>
-          </div>
-
-          <aside
-            className="howit__transversal"
-            aria-label={`Capa transversal de ${TRANSVERSAL.name}`}
-          >
-            <div className="howit__transversal-ribbon" aria-hidden="true">
-              <span className="howit__transversal-arrow">↕</span>
-              <span className="howit__transversal-ribbon-text">Transversal a todas las capas</span>
-              <span className="howit__transversal-arrow">↕</span>
-            </div>
-            <div className="howit__transversal-content">
-              <div className="howit__transversal-sticky">
-                <h3 className="howit__layer-name">{TRANSVERSAL.name}</h3>
-                <ul className="howit__tools" aria-label={`Herramientas transversales`}>
-                  {TRANSVERSAL.tools.map((tool) => (
-                    <li key={tool} className="howit__tool">{tool}</li>
-                  ))}
-                </ul>
-                <p className="howit__desc">{TRANSVERSAL.description}</p>
               </div>
-            </div>
-          </aside>
+            </aside>
+          </div>
+          <div className="howit__stack-label howit__stack-label--bottom">Infraestructura física</div>
         </div>
       </div>
     </section>

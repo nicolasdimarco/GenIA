@@ -2,54 +2,61 @@ import './HowItWorks.css'
 
 const STACK = [
   {
-    layer: 'Capa 1 · Hardware',
+    num: 1,
+    name: 'Hardware',
     color: 'blue',
     tools: ['Diagnóstico y recomendación a medida'],
     description: 'GPUs NVIDIA (H100/A100) o setups optimizados. Físico o cloud privado según tu caso.',
   },
   {
-    layer: 'Capa 2 · Motor de Inferencia',
+    num: 2,
+    name: 'Motor de Inferencia',
     color: 'green',
     tools: ['Llama.cpp'],
     description: 'Inferencia optimizada para máximo rendimiento en CPU y GPU propias.',
   },
   {
-    layer: 'Capa 3 · Gestión',
+    num: 3,
+    name: 'Gestión',
     color: 'blue',
     tools: ['Ollama'],
     description: 'Administración eficiente de los pesos de los modelos. Actualización y control local.',
   },
   {
-    layer: 'Capa 4 · Modelos',
+    num: 4,
+    name: 'Modelos',
     color: 'green',
     tools: ['Llama 3.1', 'DeepSeek', 'Mistral', 'Phi-3', 'Qwen', 'Gemma'],
     description: 'El "motor" de razonamiento: LLMs de clase mundial, abiertos y auditables. Sin cajas negras.',
   },
   {
-    layer: 'Capa 5 · Aplicativos',
+    num: 5,
+    name: 'Aplicativos',
     color: 'blue',
     tools: ['Page Assist', 'M.A.I.D (mobile)', 'OpenCode'],
     description: 'IA integrada en el navegador, dispositivos móviles y entornos de desarrollo.',
   },
   {
-    layer: 'Capa 6 · Orquestación',
+    num: 6,
+    name: 'Orquestación',
     color: 'green',
     tools: ['Langflow', 'MCP'],
     description: 'Gestión de agentes y flujos de trabajo complejos. Automatización sin código.',
   },
   {
-    layer: 'Capa 7 · Interfaz',
+    num: 7,
+    name: 'Interfaz',
     color: 'blue',
     tools: ['OpenWebUI'],
     description: 'Acceso amigable, chat y herramientas RAG para toda la organización.',
   },
-  {
-    layer: 'Transversal · Observabilidad',
-    color: 'green',
-    tools: ['LangFuse'],
-    description: 'Trazabilidad total de cada respuesta. Auditá, medí y optimizá el uso de IA con datos reales.',
-  },
 ]
+
+const TRANSVERSAL = {
+  name: 'Observabilidad',
+  tools: ['LangFuse'],
+  description: 'Trazabilidad total de cada respuesta. Auditá, medí y optimizá el uso de IA con datos reales.',
+}
 
 export default function HowItWorks() {
   return (
@@ -64,18 +71,55 @@ export default function HowItWorks() {
           </p>
         </div>
 
-        <div className="howit__grid" role="list">
-          {STACK.map((item) => (
-            <article key={item.layer} className={`howit__card howit__card--${item.color}`} role="listitem">
-              <div className="howit__layer-badge">{item.layer}</div>
-              <ul className="howit__tools" aria-label={`Herramientas de ${item.layer}`}>
-                {item.tools.map((tool) => (
-                  <li key={tool} className="howit__tool">{tool}</li>
-                ))}
-              </ul>
-              <p className="howit__desc">{item.description}</p>
-            </article>
-          ))}
+        <div className="howit__diagram">
+          <div className="howit__stack" role="list" aria-label="Stack de infraestructura">
+            <div className="howit__stack-label howit__stack-label--top">Usuario final</div>
+            {[...STACK].reverse().map((item) => (
+              <article
+                key={item.num}
+                className={`howit__layer howit__layer--${item.color}`}
+                role="listitem"
+                aria-label={`Capa ${item.num} ${item.name}`}
+              >
+                <div className="howit__num" aria-hidden="true">
+                  <span className="howit__num-label">CAPA</span>
+                  <span className="howit__num-value">{item.num}</span>
+                </div>
+                <div className="howit__body">
+                  <h3 className="howit__layer-name">{item.name}</h3>
+                  <ul className="howit__tools" aria-label={`Herramientas de capa ${item.num}`}>
+                    {item.tools.map((tool) => (
+                      <li key={tool} className="howit__tool">{tool}</li>
+                    ))}
+                  </ul>
+                  <p className="howit__desc">{item.description}</p>
+                </div>
+              </article>
+            ))}
+            <div className="howit__stack-label howit__stack-label--bottom">Infraestructura física</div>
+          </div>
+
+          <aside
+            className="howit__transversal"
+            aria-label={`Capa transversal de ${TRANSVERSAL.name}`}
+          >
+            <div className="howit__transversal-ribbon" aria-hidden="true">
+              <span className="howit__transversal-arrow">↕</span>
+              <span className="howit__transversal-ribbon-text">Transversal a todas las capas</span>
+              <span className="howit__transversal-arrow">↕</span>
+            </div>
+            <div className="howit__transversal-content">
+              <div className="howit__transversal-sticky">
+                <h3 className="howit__layer-name">{TRANSVERSAL.name}</h3>
+                <ul className="howit__tools" aria-label={`Herramientas transversales`}>
+                  {TRANSVERSAL.tools.map((tool) => (
+                    <li key={tool} className="howit__tool">{tool}</li>
+                  ))}
+                </ul>
+                <p className="howit__desc">{TRANSVERSAL.description}</p>
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
     </section>

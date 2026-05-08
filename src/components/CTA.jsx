@@ -45,7 +45,7 @@ export default function CTA() {
           <div className="cta__pitch">
             <span className="badge badge--green">Diseñá tu Estrategia</span>
             <h2 id="cta-heading">
-              La autonomía digital de tu organización comienza con un diagnóstico
+              Es el momento de pasar de la dependencia tecnológica a la elección estratégica.
             </h2>
             <p>
               Evaluamos juntos tus procesos, infraestructura y necesidades. Construimos
@@ -55,7 +55,7 @@ export default function CTA() {
 
             <ul className="cta__perks" aria-label="Qué incluye el primer contacto">
               {[
-                'Diagnóstico de AI Readiness sin costo',
+                'Diagnóstico de AI Readiness',
                 'Propuesta de stack personalizado para tu infraestructura',
                 'Estimación real de ROI y tiempo de break-even',
                 'Arquitectos de IA de frontera como socios estratégicos',

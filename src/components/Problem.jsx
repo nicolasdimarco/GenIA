@@ -18,7 +18,7 @@ const PROBLEMS = [
     Icon: LuShieldOff,
     title: 'Exfiltración de datos',
     description:
-      'El 93% de los empleados suele pegar información sensible de la empresa en herramientas de IA externas. Estrategias, datos de clientes, código propietario: todo sale de tu organización sin dejar rastro.',
+      'El 93% de los usuarios suele pegar información sensible de su organización en herramientas de IA externas. Estrategias, datos de clientes, código propietario: todo expuesto sin dejar rastro.',
   },
   {
     Icon: LuLock,
@@ -59,7 +59,7 @@ export default function Problem() {
 
         <div className="problem__callout" role="note">
           <p>
-            <strong>Sin estrategia propia, sin competitividad</strong> No contar con una estrategia de IA organizada es en sí mismo un riesgo. Diseñemos tu estrategia.
+            No contar con una estrategia de IA organizada es en sí mismo un riesgo. Diseñemos tu estrategia.
           </p>
         </div>
       </div>

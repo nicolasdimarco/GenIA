@@ -26,7 +26,7 @@ const USE_CASES = [
   {
     Icon: LuServer,
     title: 'Área administrativa',
-    description: 'Procesar facturas, recibos y liquidaciones de gastos consume gran parte del tiempo de los equipos administrativos. La IA permite la lectura inteligente de comprobantes, extrayendo datos críticos como CUIT, fechas e importes de manera multiformato, vinculando automáticamente esta información con los sistemas de gestión (ERP) de la organización.',
+    description: 'Procesar facturas, recibos y liquidaciones de gastos consume gran parte del tiempo de los equipos administrativos. Vinculación automática con los sistemas de gestión (ERP) de la organización.',
     color: 'blue',
     tag: 'Banca · Industria',
   },

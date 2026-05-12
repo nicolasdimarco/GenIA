@@ -56,12 +56,6 @@ export default function Problem() {
             </article>
           ))}
         </div>
-
-        <div className="problem__callout" role="note">
-          <p>
-            No contar con una estrategia de IA organizada es en sí mismo un riesgo. Diseñemos tu estrategia.
-          </p>
-        </div>
       </div>
     </section>
   )

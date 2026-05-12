@@ -37,7 +37,7 @@ export default function WhatIsGenIA() {
           <div className="whatis__text">
             <span className="badge badge--green">¿Cómo lo hacemos?</span>
             <h2 id="whatis-heading">
-              Construimos tu capacidad interna de IA
+              Desarrollamos una alternativa segura, flexible y escalable de adopción de IA. 
             </h2>
             <p className="whatis__lead">
               Nos convertimos en tu socio estratégico con un enfoque que abarca el ciclo completo:

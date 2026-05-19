@@ -26,7 +26,7 @@ export const es = {
     subtitleAccent: 'ni costos por token',
     leadStart: 'Implementamos estrategias de Inteligencia Artificial self-hosted con tecnología Open Source. Sin dependencia de proveedores,',
     leadStrong1: 'sin fugas de datos',
-    leadMid: 'y con',
+    leadMid: ' y con',
     leadStrong2: 'infraestructura 100% bajo tu control',
     ctaPrimary: 'Diseñá tu estrategia',
     ctaSecondary: 'Ver cómo funciona',

@@ -1,6 +1,8 @@
+import { useT } from '../i18n/LanguageContext'
 import './Footer.css'
 
 export default function Footer() {
+  const { t } = useT()
   const year = new Date().getFullYear()
 
   return (
@@ -10,27 +12,24 @@ export default function Footer() {
           <span className="footer__logo">
             Gen<span className="footer__logo-accent">IA</span>
           </span>
-          <p className="footer__tagline">
-            IA soberana, construida por cooperativas.
-          </p>
+          <p className="footer__tagline">{t.footer.tagline}</p>
           <p className="footer__copy">
             CC {year} <a href="https://genia.coop" target="_blank" rel="noopener noreferrer">Genia</a>.
-            Código libre. Datos tuyos.
+            {' '}{t.footer.copy}
           </p>
         </div>
 
-        <nav className="footer__nav" aria-label="Mapa del sitio">
+        <nav className="footer__nav" aria-label={t.footer.sitemapAria}>
           <div className="footer__nav-group">
-            <h3 className="footer__nav-title">Producto</h3>
+            <h3 className="footer__nav-title">{t.footer.productTitle}</h3>
             <ul role="list">
-              <li><a href="#que-es">Qué es GenIA</a></li>
-              <li><a href="#como-funciona">Cómo funciona</a></li>
-              <li><a href="#beneficios">Beneficios</a></li>
-              <li><a href="#soberania">Soberanía</a></li>
+              {t.footer.productLinks.map((l) => (
+                <li key={l.href}><a href={l.href}>{l.label}</a></li>
+              ))}
             </ul>
           </div>
           <div className="footer__nav-group">
-            <h3 className="footer__nav-title">Stack Open Source</h3>
+            <h3 className="footer__nav-title">{t.footer.stackTitle}</h3>
             <ul role="list">
               <li><a href="https://openwebui.com" target="_blank" rel="noopener noreferrer">OpenWebUI</a></li>
               <li><a href="https://ollama.com" target="_blank" rel="noopener noreferrer">Ollama</a></li>
@@ -42,9 +41,7 @@ export default function Footer() {
       </div>
 
       <div className="footer__bottom container">
-        <p>
-          Construido con tecnología 100% open-source. Sin tracking. Sin cookies de terceros.
-        </p>
+        <p>{t.footer.bottom}</p>
       </div>
     </footer>
   )

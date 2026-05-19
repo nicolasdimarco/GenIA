@@ -1,18 +1,20 @@
 import { useState } from 'react'
 import { LuCircleCheck } from 'react-icons/lu'
+import { useT } from '../i18n/LanguageContext'
 import './CTA.css'
 
 export default function CTA() {
+  const { t } = useT()
   const [submitted, setSubmitted] = useState(false)
   const [form, setForm] = useState({ name: '', email: '', org: '', message: '' })
   const [errors, setErrors] = useState({})
 
   const validate = () => {
     const e = {}
-    if (!form.name.trim()) e.name = 'El nombre es requerido'
-    if (!form.email.trim()) e.email = 'El email es requerido'
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = 'Email inválido'
-    if (!form.message.trim()) e.message = 'El mensaje es requerido'
+    if (!form.name.trim()) e.name = t.cta.form.nameRequired
+    if (!form.email.trim()) e.email = t.cta.form.emailRequired
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = t.cta.form.emailInvalid
+    if (!form.message.trim()) e.message = t.cta.form.messageRequired
     return e
   }
 
@@ -43,24 +45,12 @@ export default function CTA() {
       <div className="container">
         <div className="cta__layout">
           <div className="cta__pitch">
-            <span className="badge badge--green">Diseñá tu Estrategia</span>
-            <h2 id="cta-heading">
-              Es el momento de pasar de la dependencia tecnológica a la elección estratégica.
-            </h2>
-            <p>
-              Evaluamos juntos tus procesos, infraestructura y necesidades. Construimos
-              el roadmap de madurez de IA adaptado a tu realidad — sin dependencias externas
-              y con retorno de inversión medible.
-            </p>
+            <span className="badge badge--green">{t.cta.badge}</span>
+            <h2 id="cta-heading">{t.cta.title}</h2>
+            <p>{t.cta.lead}</p>
 
-            <ul className="cta__perks" aria-label="Qué incluye el primer contacto">
-              {[
-                'Diagnóstico de AI Readiness',
-                'Propuesta de stack personalizado para tu infraestructura',
-                'Estimación real de ROI y tiempo de break-even',
-                'Arquitectos de IA de frontera como socios estratégicos',
-                'Sin compromiso. Sin letra chica.',
-              ].map((item) => (
+            <ul className="cta__perks" aria-label={t.cta.perksAria}>
+              {t.cta.perks.map((item) => (
                 <li key={item}>
                   <span className="cta__perk-check" aria-hidden="true">✓</span>
                   {item}
@@ -69,7 +59,7 @@ export default function CTA() {
             </ul>
 
             <div className="cta__contact-links">
-              <p>También podés escribirnos directamente:</p>
+              <p>{t.cta.directContact}</p>
               <a href="mailto:hola@genia.coop" className="cta__email">
                 hola@genia.coop
               </a>
@@ -80,18 +70,18 @@ export default function CTA() {
             {submitted ? (
               <div className="cta__success" role="alert" aria-live="polite">
                 <span className="cta__success-icon" aria-hidden="true"><LuCircleCheck size={48} /></span>
-                <h3>¡Mensaje enviado!</h3>
-                <p>Nos pondremos en contacto en las próximas 48 horas hábiles.</p>
+                <h3>{t.cta.successTitle}</h3>
+                <p>{t.cta.successBody}</p>
               </div>
             ) : (
               <form
                 className="cta__form"
                 onSubmit={handleSubmit}
                 noValidate
-                aria-label="Formulario de contacto"
+                aria-label={t.cta.form.aria}
               >
                 <div className="cta__field">
-                  <label htmlFor="name">Nombre completo <span aria-hidden="true">*</span></label>
+                  <label htmlFor="name">{t.cta.form.name} <span aria-hidden="true">*</span></label>
                   <input
                     id="name"
                     name="name"
@@ -101,14 +91,14 @@ export default function CTA() {
                     aria-required="true"
                     aria-describedby={errors.name ? 'name-error' : undefined}
                     aria-invalid={!!errors.name}
-                    placeholder="Tu nombre"
+                    placeholder={t.cta.form.namePlaceholder}
                     autoComplete="name"
                   />
                   {errors.name && <span id="name-error" className="cta__error" role="alert">{errors.name}</span>}
                 </div>
 
                 <div className="cta__field">
-                  <label htmlFor="email">Email <span aria-hidden="true">*</span></label>
+                  <label htmlFor="email">{t.cta.form.email} <span aria-hidden="true">*</span></label>
                   <input
                     id="email"
                     name="email"
@@ -118,27 +108,27 @@ export default function CTA() {
                     aria-required="true"
                     aria-describedby={errors.email ? 'email-error' : undefined}
                     aria-invalid={!!errors.email}
-                    placeholder="tu@organización.com"
+                    placeholder={t.cta.form.emailPlaceholder}
                     autoComplete="email"
                   />
                   {errors.email && <span id="email-error" className="cta__error" role="alert">{errors.email}</span>}
                 </div>
 
                 <div className="cta__field">
-                  <label htmlFor="org">Organización</label>
+                  <label htmlFor="org">{t.cta.form.org}</label>
                   <input
                     id="org"
                     name="org"
                     type="text"
                     value={form.org}
                     onChange={handleChange}
-                    placeholder="Nombre de tu empresa o cooperativa"
+                    placeholder={t.cta.form.orgPlaceholder}
                     autoComplete="organization"
                   />
                 </div>
 
                 <div className="cta__field">
-                  <label htmlFor="message">¿Qué necesitás? <span aria-hidden="true">*</span></label>
+                  <label htmlFor="message">{t.cta.form.message} <span aria-hidden="true">*</span></label>
                   <textarea
                     id="message"
                     name="message"
@@ -148,13 +138,13 @@ export default function CTA() {
                     aria-required="true"
                     aria-describedby={errors.message ? 'message-error' : undefined}
                     aria-invalid={!!errors.message}
-                    placeholder="Contanos brevemente tu situación actual y qué querés lograr con IA..."
+                    placeholder={t.cta.form.messagePlaceholder}
                   />
                   {errors.message && <span id="message-error" className="cta__error" role="alert">{errors.message}</span>}
                 </div>
 
                 <button type="submit" className="btn btn--primary cta__submit">
-                  Enviar mensaje
+                  {t.cta.form.submit}
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                     <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>

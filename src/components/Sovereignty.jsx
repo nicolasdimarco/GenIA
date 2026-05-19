@@ -1,3 +1,4 @@
+// import CostCalculator from './CostCalculator'
 import './Sovereignty.css'
 
 const ROI_ITEMS = [
@@ -60,6 +61,8 @@ export default function Sovereignty() {
             </article>
           ))}
         </div>
+
+        {/* <CostCalculator /> */}
       </div>
     </section>
   )

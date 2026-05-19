@@ -2,10 +2,6 @@
   background: var(--color-bg-alt);
 }
 
-.problem .section-header p {
-  max-width: none;
-}
-
 .problem__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

@@ -5,7 +5,7 @@ import WhatIsGenIA from './components/WhatIsGenIA'
 import HowItWorks from './components/HowItWorks'
 import Benefits from './components/Benefits'
 import Sovereignty from './components/Sovereignty'
-import AboutPatio from './components/AboutPatio'
+import About from './components/About'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
 
@@ -23,7 +23,7 @@ export default function App() {
         <Sovereignty />
         <HowItWorks />
         <Benefits />
-        <AboutPatio />
+        <About />
         <CTA />
       </main>
       <Footer />

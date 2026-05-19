@@ -9,7 +9,7 @@
 
 ## ¿Qué es GenIA?
 
-**GenIA** es una propuesta de servicio de [Patio Community](https://patio.coop) — la red internacional de cooperativas tecnológicas — para implementar estrategias de **IA soberana** en organizaciones que necesitan:
+**GenIA** es una propuesta de servicio de [Farox](https://farox.coop) y [Cambá](https://camba.coop)  para implementar estrategias de **IA soberana** en organizaciones que necesitan:
 
 - Control total de sus datos e infraestructura
 - Reducir la dependencia de proveedores externos (ChatGPT, Copilot, etc.)
@@ -92,7 +92,7 @@ src/
 │   ├── Sovereignty     # Retorno de inversión
 │   ├── HowItWorks      # AI Open Stack (7 capas)
 │   ├── Benefits        # Casos de uso por industria
-│   ├── AboutPatio      # Sobre Patio Community
+│   ├── About           # Sobre Farox y Cambá
 │   ├── CTA             # Formulario de contacto
 │   └── Footer          # Footer
 ├── App.jsx             # Composición de secciones
@@ -113,14 +113,11 @@ src/
 
 ---
 
-## 🤝 Sobre Patio Community
+## 🤝 Sobre Farox y Cambá
 
-**Patio** es el mayor ecosistema internacional de cooperativas tecnológicas:
-- **117+** cooperativas en **27+** países
-- **3.500+** representantes
-- **2.000+** proyectos entregados
+Las cooperativas de tecnología trabajamos de manera colaborativa para crear una tecnología más justa y soberana. GenIA nace como una iniciativa de las cooperativas **Farox** y **Cambá**, con el objetivo de acompañar a organizaciones que buscan adoptar IA de manera controlada y segura.
 
-📧 [welcome@patio.coop](mailto:welcome@patio.coop) · 🌐 [patio.coop](https://patio.coop)
+📧 [hola@genia.coop](mailto:hola@genia.coop) · 🌐 [genia.coop](https://genia.coop)
 
 ---
 

@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react'
 import './Navbar.css'
 
 const NAV_LINKS = [
-  { href: '#problema', label: 'El Problema' },
-  { href: '#que-es', label: 'Metodología' },
+  { href: '#problema', label: 'PROBLEMA' },
+  { href: '#que-es', label: 'METODOLOGÍA' },
   { href: '#soberania', label: 'ROI' },
-  { href: '#como-funciona', label: 'AI Open Stack' },
-  { href: '#beneficios', label: 'Casos de Uso' },
-  { href: '#patio', label: 'Patio' },
+  { href: '#como-funciona', label: 'STACK IA' },
+  { href: '#beneficios', label: 'CASOS DE USO' },
+  { href: '#about', label: 'QUIENES SOMOS' },
 ]
 
 export default function Navbar() {

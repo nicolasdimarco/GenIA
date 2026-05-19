@@ -70,8 +70,8 @@ export default function CTA() {
 
             <div className="cta__contact-links">
               <p>También podés escribirnos directamente:</p>
-              <a href="mailto:welcome@patio.coop" className="cta__email">
-                welcome@patio.coop
+              <a href="mailto:hola@genia.coop" className="cta__email">
+                hola@genia.coop
               </a>
             </div>
           </div>

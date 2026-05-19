@@ -14,7 +14,7 @@ export default function Footer() {
             IA soberana, construida por cooperativas.
           </p>
           <p className="footer__copy">
-            © {year} <a href="https://patio.coop" target="_blank" rel="noopener noreferrer">Patio Community</a>.
+            CC {year} <a href="https://genia.coop" target="_blank" rel="noopener noreferrer">Genia</a>.
             Código libre. Datos tuyos.
           </p>
         </div>
@@ -27,22 +27,6 @@ export default function Footer() {
               <li><a href="#como-funciona">Cómo funciona</a></li>
               <li><a href="#beneficios">Beneficios</a></li>
               <li><a href="#soberania">Soberanía</a></li>
-            </ul>
-          </div>
-          <div className="footer__nav-group">
-            <h3 className="footer__nav-title">Comunidad</h3>
-            <ul role="list">
-              <li><a href="#patio">Patio Community</a></li>
-              <li>
-                <a href="https://patio.coop" target="_blank" rel="noopener noreferrer">
-                  patio.coop
-                </a>
-              </li>
-              <li>
-                <a href="mailto:welcome@patio.coop">
-                  welcome@patio.coop
-                </a>
-              </li>
             </ul>
           </div>
           <div className="footer__nav-group">

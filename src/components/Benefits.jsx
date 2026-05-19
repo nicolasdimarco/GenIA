@@ -18,10 +18,10 @@ const USE_CASES = [
   },
   {
     Icon: LuReceipt,
-    title: 'Jubilación y Pensión',
-    description: ' Gestión Inteligente de Expedientes Previsionales y detección de fraude: Agentes de IA que clasifican y priorizan solicitudes y detectan duplicidades o inconsistencias en los aportes de forma automática.',
+    title: 'Gestión del trabajo',
+    description: ' Gestión Inteligente procesos relacionados al trabajo: Agentes de IA que facilitan el buen funcionamiento organizacional interno',
     color: 'green',
-    tag: 'ANSES · Cajas',
+    tag: 'Gestión · Organizaciones',
   },
   {
     Icon: LuServer,

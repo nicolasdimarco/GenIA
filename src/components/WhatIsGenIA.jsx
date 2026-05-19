@@ -4,27 +4,27 @@ import './WhatIsGenIA.css'
 const STEPS = [
   {
     number: '01',
-    title: 'Diagnóstico',
+    title: 'Diagnóstico:',
     text: 'Evaluación de procesos, infraestructura y calidad de datos.',
   },
   {
     number: '02',
-    title: 'Implementación',
+    title: 'Implementación:',
     text: 'Stack personalizado con bases de conocimiento propio.',
   },
   {
     number: '03',
-    title: 'Piloto Controlado',
+    title: 'Piloto Controlado:',
     text: 'Implementación de "Quick Wins" para generar confianza interna y demostrar valor antes de escalar la solución.',
   },
   {
     number: '04',
-    title: 'Desarrollo y Automatización',
+    title: 'Desarrollo y Automatización:',
     text: 'Creación de agentes autónomos y aplicativos a medida.',
   },
   {
     number: '05',
-    title: 'Acompañamiento Continuo',
+    title: 'Acompañamiento Continuo:',
     text: 'Actualización y optimización continua por arquitectos de IA que están en la frontera del conocimiento.',
   },
 ]
@@ -58,7 +58,7 @@ export default function WhatIsGenIA() {
                   <span className="whatis__step-num" aria-hidden="true">{s.number}</span>
                   <div>
                     <strong className="whatis__step-title">{s.title}</strong>
-                    <span className="whatis__step-text"> — {s.text}</span>
+                    <span className="whatis__step-text"> {s.text}</span>
                   </div>
                 </li>
               ))}

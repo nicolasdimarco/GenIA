@@ -1,16 +1,9 @@
 import { useState, useEffect } from 'react'
+import { useT } from '../i18n/LanguageContext'
 import './Navbar.css'
 
-const NAV_LINKS = [
-  { href: '#problema', label: 'PROBLEMA' },
-  { href: '#que-es', label: 'METODOLOGÍA' },
-  { href: '#soberania', label: 'ROI' },
-  { href: '#como-funciona', label: 'STACK IA' },
-  { href: '#beneficios', label: 'CASOS DE USO' },
-  { href: '#about', label: 'QUIENES SOMOS' },
-]
-
 export default function Navbar() {
+  const { t, lang, toggle } = useT()
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -21,11 +14,12 @@ export default function Navbar() {
   }, [])
 
   const handleLinkClick = () => setMenuOpen(false)
+  const nextLabel = lang === 'es' ? 'EN' : 'ES'
 
   return (
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`} role="banner">
-      <nav className="container navbar__inner" aria-label="Navegación principal">
-        <a href="#top" className="navbar__logo" aria-label="GenIA — inicio">
+      <nav className="container navbar__inner" aria-label={t.a11y.navLabel}>
+        <a href="#top" className="navbar__logo" aria-label={t.a11y.logoAria}>
           <span className="navbar__logo-text">Gen<span className="navbar__logo-accent">IA</span></span>
         </a>
 
@@ -33,7 +27,7 @@ export default function Navbar() {
           className={`navbar__burger ${menuOpen ? 'navbar__burger--open' : ''}`}
           aria-expanded={menuOpen}
           aria-controls="nav-menu"
-          aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
+          aria-label={menuOpen ? t.a11y.closeMenu : t.a11y.openMenu}
           onClick={() => setMenuOpen(o => !o)}
         >
           <span aria-hidden="true" />
@@ -46,7 +40,7 @@ export default function Navbar() {
           className={`navbar__links ${menuOpen ? 'navbar__links--open' : ''}`}
           role="list"
         >
-          {NAV_LINKS.map(({ href, label }) => (
+          {t.nav.links.map(({ href, label }) => (
             <li key={href}>
               <a href={href} className="navbar__link" onClick={handleLinkClick}>
                 {label}
@@ -54,8 +48,18 @@ export default function Navbar() {
             </li>
           ))}
           <li>
+            <button
+              type="button"
+              className="navbar__lang"
+              onClick={toggle}
+              aria-label={t.a11y.langSwitchAria}
+            >
+              {nextLabel}
+            </button>
+          </li>
+          <li>
             <a href="#contacto" className="btn btn--primary navbar__cta" onClick={handleLinkClick}>
-              Contactar
+              {t.nav.cta}
             </a>
           </li>
         </ul>

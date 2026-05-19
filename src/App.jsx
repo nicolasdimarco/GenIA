@@ -8,12 +8,14 @@ import Sovereignty from './components/Sovereignty'
 import About from './components/About'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
+import { useT } from './i18n/LanguageContext'
 
 export default function App() {
+  const { t } = useT()
   return (
     <>
       <a href="#main-content" className="sr-only">
-        Saltar al contenido principal
+        {t.a11y.skip}
       </a>
       <Navbar />
       <main id="main-content">

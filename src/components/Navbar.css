@@ -68,6 +68,27 @@
   font-size: var(--font-size-sm);
 }
 
+.navbar__lang {
+  margin-left: 0.25rem;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.35rem 0.6rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.navbar__lang:hover,
+.navbar__lang:focus-visible {
+  color: var(--color-text);
+  border-color: var(--color-blue);
+  background: rgba(150, 216, 253, 0.08);
+}
+
 /* === BURGER (mobile) === */
 .navbar__burger {
   display: none;
@@ -135,6 +156,14 @@
     margin-top: 0.5rem;
     text-align: center;
     justify-content: center;
+  }
+
+  .navbar__lang {
+    margin-left: 0;
+    margin-top: 0.25rem;
+    text-align: center;
+    width: 100%;
+    padding: 0.65rem 1rem;
   }
 }
 

@@ -2,11 +2,27 @@
   background: var(--color-bg-alt);
 }
 
+.problem .section-header p {
+  max-width: none;
+}
+
 .problem__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin-bottom: 2.5rem;
+}
+
+@media (max-width: 980px) {
+  .problem__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .problem__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .problem__card {
@@ -25,16 +41,16 @@
 .problem__icon {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 1rem;
   color: var(--color-blue);
 }
 
 .problem__title {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   font-weight: 700;
   margin-bottom: 0.75rem;
   color: var(--color-text);
-  white-space: nowrap;
 }
 
 .problem__desc {

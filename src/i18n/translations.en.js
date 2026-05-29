@@ -155,6 +155,8 @@ export const en = {
       messagePlaceholder: 'Give us a quick rundown of where you stand today and what you want to achieve with AI...',
       messageRequired: 'Message is required',
       submit: 'Send message',
+      submitting: 'Sending...',
+      submitError: 'Something went wrong while sending your message. Please try again or email us at hola@genia.coop.',
     },
   },
   footer: {

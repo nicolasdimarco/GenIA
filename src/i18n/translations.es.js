@@ -155,6 +155,8 @@ export const es = {
       messagePlaceholder: 'Contanos brevemente tu situación actual y qué querés lograr con IA...',
       messageRequired: 'El mensaje es requerido',
       submit: 'Enviar mensaje',
+      submitting: 'Enviando...',
+      submitError: 'Hubo un problema al enviar el mensaje. Intentalo nuevamente o escribinos a hola@genia.coop.',
     },
   },
   footer: {

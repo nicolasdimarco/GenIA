@@ -90,12 +90,12 @@ export default function CTA() {
               ))}
             </ul>
 
-            <div className="cta__contact-links">
+{/*             <div className="cta__contact-links">
               <p>{t.cta.directContact}</p>
               <a href="mailto:hola@genia.coop" className="cta__email">
                 hola@genia.coop
               </a>
-            </div>
+            </div> */}
           </div>
 
           <div className="cta__form-wrap">

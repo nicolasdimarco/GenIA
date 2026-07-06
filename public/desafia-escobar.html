@@ -305,16 +305,61 @@
             color: var(--color-text-muted);
             margin-top: 4px;
             line-height: 1.7;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: .25rem .5rem;
         }
 
-        /* FOOTER */
-        .footer {
-            margin-top: 30px;
-            font-size: .7rem;
-            color: rgba(143, 163, 191, 0.5);
-            text-align: center;
-            border-top: 1px solid var(--color-border);
-            padding-top: 18px;
+        .contact-block .contact-email {
+            display: inline-flex;
+            align-items: center;
+            gap: .3rem;
+            white-space: nowrap;
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+            body {
+                padding: 24px 16px;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+            }
+
+            h2 {
+                font-size: 1rem;
+            }
+
+            .badge {
+                font-size: .8rem;
+            }
+
+            p, li, .index-item, .ask-box {
+                font-size: 1rem;
+            }
+
+            .index-box .index-title,
+            .next-steps .next-title {
+                font-size: .8rem;
+            }
+
+            .ask-box .ask-title {
+                font-size: .85rem;
+            }
+
+            .stat-card .stat-number {
+                font-size: 1.5rem;
+            }
+
+            .stat-card .stat-label {
+                font-size: .8rem;
+            }
+
+            .contact-block {
+                font-size: 1rem;
+            }
         }
 
         /* PRINT / PDF */
@@ -335,13 +380,11 @@
 
             .container { max-width: 100% !important; }
 
-            /* Evitar cortes dentro de las cards */
             .section, .index-box, .ask-box, .next-steps, .contact-block {
                 break-inside: avoid;
                 page-break-inside: avoid;
             }
 
-            /* Asegurar que los fondos se impriman */
             .section { background: #1a2235 !important; }
             .index-box { background: linear-gradient(135deg, rgba(150,216,253,0.07), rgba(91,241,117,0.04)) !important; }
             .ask-box { background: rgba(91,241,117,0.06) !important; }
@@ -434,11 +477,11 @@
     <div class="contact-block">
         <div class="contact-name">Nicolás Doallo — GenIA</div>
         <div class="contact-meta">
-            📞 +54 11 5893 2884 &nbsp;·&nbsp; ✉️ <a href="mailto:nico@camba.coop">nico@camba.coop</a>
+            <span>📞 +54 11 5893 2884</span>
+            <span>&nbsp;·&nbsp;</span>
+            <span class="contact-email">✉️ <a href="mailto:nico@camba.coop">nico@camba.coop</a></span>
         </div>
     </div>
-
-    <div class="footer">Documento de apoyo a la toma de decisión · Propietario: Cooperativa Farox / GenIA</div>
 
 </div>
 </body>

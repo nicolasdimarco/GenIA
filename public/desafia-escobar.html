@@ -392,6 +392,27 @@
             .contact-block { background: #1a2235 !important; }
             .stat-card { background: rgba(150,216,253,0.06) !important; }
         }
+
+        /* CTA */
+        .cta-link {
+            display: block;
+            margin-top: 28px;
+            padding: 14px 24px;
+            background: linear-gradient(135deg, var(--color-blue), var(--color-green));
+            color: #0a0f1e;
+            font-weight: 800;
+            font-size: 1rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: var(--border-radius-lg);
+            letter-spacing: .02em;
+            transition: opacity .15s;
+        }
+
+        .cta-link:hover {
+            opacity: .85;
+        }
+
     </style>
 </head>
 <body>
@@ -482,6 +503,9 @@
             <span class="contact-email">✉️ <a href="mailto:nico@camba.coop">nico@camba.coop</a></span>
         </div>
     </div>
+
+    <!-- CTA -->
+    <a href="https://www.genia.coop" class="cta-link">Ver más de GenIA</a>
 
 </div>
 </body>

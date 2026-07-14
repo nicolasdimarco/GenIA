@@ -14,6 +14,7 @@ export const en = {
       { href: '#que-es', label: 'OUR APPROACH' },
       { href: '#soberania', label: 'ROI' },
       { href: '#como-funciona', label: 'AI STACK' },
+      { href: '#genway', label: 'GENWAY' },
       { href: '#beneficios', label: 'USE CASES' },
       { href: '#about', label: 'ABOUT US' },
     ],
@@ -102,6 +103,46 @@ export const en = {
       description: 'End-to-end traceability for every response. Audit, measure, and fine-tune AI usage with real data.',
     },
   },
+  genway: {
+    badge: 'Genway',
+    title: 'Genway: the command center for your AI adoption',
+    lead: 'A governance layer that sits between your organization and every AI model, giving you full visibility and the power to decide how, who, and with which models people work.',
+    diagram: {
+      orgLabel: 'Your organization',
+      orgSub: 'Teams, apps & users',
+      hubLabel: 'GENWAY',
+      hubSub: 'Control · Privacy · Routing',
+      modelsLabel: 'Models',
+      models: ['Llama', 'DeepSeek', 'Mistral', 'Qwen', 'Gemma'],
+    },
+    items: [
+      {
+        tag: 'Governance',
+        title: 'Full control over usage and adoption',
+        description: 'Define usage policies by team, department, or individual. Set budgets and consumption limits, manage access permissions, and see in real time who is using which model, how much, and for what. AI adoption stops being a black box and becomes a managed decision.',
+      },
+      {
+        tag: 'Privacy',
+        title: 'Data protection and privacy',
+        description: 'Every interaction stays under your control: no data retention by third parties, sensitive information masking, and full traceability of every request and response. Your data never leaves your trust perimeter.',
+      },
+      {
+        tag: 'Interoperability',
+        title: 'Freedom to choose and combine models',
+        description: 'Connect to any provider or model through a single gateway. Migrate gradually toward free, self-hosted models without rewriting your applications or getting locked into a single vendor.',
+      },
+      {
+        tag: 'Compliance',
+        title: 'A security layer built for compliance',
+        description: 'Apply access, audit, and retention rules designed for sensitive data. Meet data-protection regulations and internal security policies without slowing down your teams’ innovation.',
+      },
+    ],
+    cta: {
+      title: 'Ready to govern AI adoption across your organization?',
+      lead: 'Let’s talk about rolling out this control, privacy, and compliance layer on your infrastructure.',
+      button: 'I want to learn about Genway',
+    },
+  },
   benefits: {
     badge: 'Use cases',
     title: 'Targeted solutions for sovereign needs',
@@ -167,6 +208,7 @@ export const en = {
     productLinks: [
       { href: '#que-es', label: 'What is GenIA' },
       { href: '#como-funciona', label: 'How it works' },
+      { href: '#genway', label: 'Genway' },
       { href: '#beneficios', label: 'Benefits' },
       { href: '#soberania', label: 'Sovereignty' },
     ],

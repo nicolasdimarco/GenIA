@@ -14,6 +14,7 @@ export const es = {
       { href: '#que-es', label: 'METODOLOGÍA' },
       { href: '#soberania', label: 'ROI' },
       { href: '#como-funciona', label: 'STACK IA' },
+      { href: '#genway', label: 'GENWAY' },
       { href: '#beneficios', label: 'CASOS DE USO' },
       { href: '#about', label: 'QUIENES SOMOS' },
     ],
@@ -102,6 +103,46 @@ export const es = {
       description: 'Trazabilidad total de cada respuesta. Auditá, medí y optimizá el uso de IA con datos reales.',
     },
   },
+  genway: {
+    badge: 'Genway',
+    title: 'Genway: el centro de mando de tu adopción de IA',
+    lead: 'Una capa de gobierno que se ubica entre tu organización y los modelos de IA, dándote visibilidad total y el poder de decidir cómo, quién y con qué modelos se trabaja.',
+    diagram: {
+      orgLabel: 'Tu organización',
+      orgSub: 'Equipos, apps y usuarios',
+      hubLabel: 'GENWAY',
+      hubSub: 'Control · Privacidad · Ruteo',
+      modelsLabel: 'Modelos',
+      models: ['Llama', 'DeepSeek', 'Mistral', 'Qwen', 'Gemma'],
+    },
+    items: [
+      {
+        tag: 'Gobernanza',
+        title: 'Control total del uso y la adopción',
+        description: 'Definí políticas de uso por equipo, área o persona. Asigná presupuestos y límites de consumo, gestioná permisos de acceso y visualizá en tiempo real quién usa qué modelo, cuánto y para qué. La adopción de IA deja de ser una caja negra y se convierte en una decisión gestionada.',
+      },
+      {
+        tag: 'Privacidad',
+        title: 'Protección de datos y privacidad',
+        description: 'Cada interacción queda bajo tu control: sin retención de datos en manos de terceros, con enmascarado de información sensible y trazabilidad completa de cada solicitud y respuesta. Tus datos no salen de tu perímetro de confianza.',
+      },
+      {
+        tag: 'Interoperabilidad',
+        title: 'Libertad para elegir y combinar modelos',
+        description: 'Conectate con cualquier proveedor o modelo —comercial o de código abierto— a través de una única puerta de entrada. Migrá de forma gradual hacia modelos libres y auto-hospedados, sin reescribir tus aplicaciones ni quedar atado a un solo proveedor.',
+      },
+      {
+        tag: 'Cumplimiento',
+        title: 'Una capa de seguridad para el cumplimiento normativo',
+        description: 'Aplicá reglas de acceso, auditoría y retención pensadas para datos sensibles. Cumplí con normativas de protección de datos y políticas internas de seguridad sin frenar la innovación de tus equipos.',
+      },
+    ],
+    cta: {
+      title: '¿Listo para gobernar la adopción de IA en tu organización?',
+      lead: 'Conversemos sobre cómo implementar esta capa de control, privacidad y cumplimiento en tu infraestructura.',
+      button: 'Quiero conocer Genway',
+    },
+  },
   benefits: {
     badge: 'Casos de Uso',
     title: 'Soluciones específicas para necesidades soberanas',
@@ -167,6 +208,7 @@ export const es = {
     productLinks: [
       { href: '#que-es', label: 'Qué es GenIA' },
       { href: '#como-funciona', label: 'Cómo funciona' },
+      { href: '#genway', label: 'Genway' },
       { href: '#beneficios', label: 'Beneficios' },
       { href: '#soberania', label: 'Soberanía' },
     ],

@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import Problem from './components/Problem'
 import WhatIsGenIA from './components/WhatIsGenIA'
 import HowItWorks from './components/HowItWorks'
+import Genway from './components/Genway'
 import Benefits from './components/Benefits'
 import Sovereignty from './components/Sovereignty'
 import About from './components/About'
@@ -24,6 +25,7 @@ export default function App() {
         <WhatIsGenIA />
         <Sovereignty />
         <HowItWorks />
+        <Genway />
         <Benefits />
         <About />
         <CTA />

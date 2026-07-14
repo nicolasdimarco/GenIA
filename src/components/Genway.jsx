@@ -1,4 +1,4 @@
-import { LuGauge, LuLockKeyhole, LuShuffle, LuShieldCheck, LuArrowRight } from 'react-icons/lu'
+import { LuGauge, LuLockKeyhole, LuShuffle, LuShieldCheck, LuChevronRight } from 'react-icons/lu'
 import { useT } from '../i18n/LanguageContext'
 import './Genway.css'
 
@@ -33,7 +33,9 @@ export default function Genway() {
           </div>
 
           <div className="genway__flow-arrow" aria-hidden="true">
-            <LuArrowRight size={22} />
+            <LuChevronRight className="genway__flow-arrow-icon genway__flow-arrow-icon--1" size={22} />
+            <LuChevronRight className="genway__flow-arrow-icon genway__flow-arrow-icon--2" size={22} />
+            <LuChevronRight className="genway__flow-arrow-icon genway__flow-arrow-icon--3" size={22} />
           </div>
 
           <div className="genway__flow-node genway__flow-node--hub">
@@ -45,7 +47,9 @@ export default function Genway() {
           </div>
 
           <div className="genway__flow-arrow" aria-hidden="true">
-            <LuArrowRight size={22} />
+            <LuChevronRight className="genway__flow-arrow-icon genway__flow-arrow-icon--1" size={22} />
+            <LuChevronRight className="genway__flow-arrow-icon genway__flow-arrow-icon--2" size={22} />
+            <LuChevronRight className="genway__flow-arrow-icon genway__flow-arrow-icon--3" size={22} />
           </div>
 
           <div className="genway__flow-node genway__flow-node--models">

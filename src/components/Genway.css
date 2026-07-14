@@ -86,10 +86,54 @@
 }
 
 .genway__flow-arrow {
+  position: relative;
   flex-shrink: 0;
-  color: var(--color-text-muted);
-  opacity: 0.5;
-  display: flex;
+  width: clamp(28px, 4vw, 40px);
+  height: 22px;
+  color: var(--color-blue);
+  overflow: hidden;
+}
+
+.genway__flow-arrow-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: drop-shadow(0 0 4px rgba(150, 216, 253, 0.65));
+  animation: genway-arrow-flow 1.8s ease-in-out infinite;
+}
+
+.genway__flow-arrow-icon--1 { animation-delay: 0s; }
+.genway__flow-arrow-icon--2 { animation-delay: 0.6s; }
+.genway__flow-arrow-icon--3 { animation-delay: 1.2s; }
+
+@keyframes genway-arrow-flow {
+  0% {
+    opacity: 0;
+    transform: translateX(-60%);
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(160%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .genway__flow-arrow-icon {
+    animation: none;
+    opacity: 0.7;
+    position: static;
+  }
+
+  .genway__flow-arrow-icon--2,
+  .genway__flow-arrow-icon--3 {
+    display: none;
+  }
 }
 
 /* --- Base circle shared by all three nodes --- */
@@ -187,9 +231,14 @@
   white-space: nowrap;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 640px) {
   .genway__flow {
-    justify-content: flex-start;
+    flex-direction: column;
+    overflow-x: visible;
+  }
+
+  .genway__flow-arrow {
+    transform: rotate(90deg);
   }
 }
 

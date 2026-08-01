@@ -1,4 +1,5 @@
 import logoFarox from '../img/logo-farox.png'
+import logoNayra from '../img/logo-nayra.svg'
 import logoCamba from '../img/logo-camba.png'
 import { useT } from '../i18n/LanguageContext'
 import './About.css'
@@ -6,6 +7,7 @@ import './About.css'
 const COOPS = [
   { name: 'Farox', logo: logoFarox, url: 'https://farox.coop/' },
   { name: 'Cambá', logo: logoCamba, url: 'https://camba.coop/' },
+  { name: 'Nayra', logo: logoNayra, url: 'https://nayra.coop/', wide: true },
 ]
 
 export default function About() {
@@ -21,7 +23,7 @@ export default function About() {
           </h2>
           <p className="patio__lead">
             {t.about.leadStart} <strong>{t.about.leadBrand}</strong> {t.about.leadMid}{' '}
-            <strong>Farox</strong> {t.about.leadAnd} <strong>Cambá</strong>{t.about.leadEnd}
+            <strong>Farox</strong>, <strong>Nayra</strong> {t.about.leadAnd} <strong>Cambá</strong>{t.about.leadEnd}
           </p>
         </div>
 
@@ -32,10 +34,10 @@ export default function About() {
               href={c.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="patio__coop"
+              className={`patio__coop ${c.wide ? 'patio__coop--wide' : ''}`}
               role="listitem"
             >
-              <div className="patio__coop-logo-wrap">
+              <div className={`patio__coop-logo-wrap ${c.wide ? 'patio__coop-logo-wrap--wide' : ''}`}>
                 <img src={c.logo} alt={`Logo ${c.name}`} className="patio__coop-logo" />
               </div>
               <span className="patio__coop-link">

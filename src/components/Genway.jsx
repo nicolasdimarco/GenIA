@@ -1,5 +1,6 @@
 import { LuGauge, LuLockKeyhole, LuShuffle, LuShieldCheck, LuChevronRight } from 'react-icons/lu'
 import { useT } from '../i18n/LanguageContext'
+import { Link } from '../router/Router'
 import './Genway.css'
 
 const ICONS = [LuGauge, LuLockKeyhole, LuShuffle, LuShieldCheck]
@@ -90,9 +91,9 @@ export default function Genway() {
         <div className="genway__cta">
           <h3 className="genway__cta-title">{t.genway.cta.title}</h3>
           <p className="genway__cta-lead">{t.genway.cta.lead}</p>
-          <a href="#contacto" className="btn btn--primary">
+          <Link href="/#contacto" className="btn btn--primary">
             {t.genway.cta.button}
-          </a>
+          </Link>
         </div>
       </div>
     </section>

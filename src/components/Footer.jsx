@@ -1,4 +1,5 @@
 import { useT } from '../i18n/LanguageContext'
+import { Link } from '../router/Router'
 import './Footer.css'
 
 export default function Footer() {
@@ -24,7 +25,7 @@ export default function Footer() {
             <h3 className="footer__nav-title">{t.footer.productTitle}</h3>
             <ul role="list">
               {t.footer.productLinks.map((l) => (
-                <li key={l.href}><a href={l.href}>{l.label}</a></li>
+                <li key={l.href}><Link href={l.href}>{l.label}</Link></li>
               ))}
             </ul>
           </div>

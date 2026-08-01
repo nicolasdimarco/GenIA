@@ -68,6 +68,81 @@
   font-size: var(--font-size-sm);
 }
 
+/* === PRODUCTS DROPDOWN === */
+.navbar__products {
+  position: relative;
+}
+
+.navbar__products-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: none;
+  font-family: var(--font-family);
+  cursor: pointer;
+}
+
+.navbar__products-chevron {
+  transition: transform 0.2s ease;
+}
+
+.navbar__products-trigger--open .navbar__products-chevron {
+  transform: rotate(180deg);
+}
+
+.navbar__dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  min-width: max-content;
+  list-style: none;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-card);
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+  z-index: 10;
+}
+
+.navbar__dropdown--open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.navbar__dropdown-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: background 0.2s ease;
+}
+
+.navbar__dropdown-link:hover {
+  background: rgba(150, 216, 253, 0.08);
+}
+
+.navbar__dropdown-label {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-blue);
+}
+
+.navbar__dropdown-desc {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
 .navbar__lang {
   margin-left: 0.25rem;
   background: transparent;
@@ -164,6 +239,33 @@
     text-align: center;
     width: 100%;
     padding: 0.65rem 1rem;
+  }
+
+  .navbar__products-trigger {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    font-size: var(--font-size-base);
+  }
+
+  .navbar__dropdown {
+    position: static;
+    box-shadow: none;
+    border: none;
+    background: rgba(255, 255, 255, 0.03);
+    margin-top: 0.25rem;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease, padding 0.25s ease;
+  }
+
+  .navbar__dropdown--open {
+    max-height: 260px;
+    padding: 0.5rem;
   }
 }
 

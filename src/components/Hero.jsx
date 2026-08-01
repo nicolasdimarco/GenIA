@@ -20,7 +20,7 @@ export default function Hero() {
           {t.hero.title}
         </h1>
         <h2>
-          {t.hero.subtitle} <br />  <span className="sovereignty__accent"> {t.hero.subtitleAccent}</span>.
+          {t.hero.subtitle} <br />  <span className="hero__title-accent"> {t.hero.subtitleAccent}</span>.
         </h2>
         <p className="hero__subtitle">
           {t.hero.leadStart} <strong>{t.hero.leadStrong1}</strong>{t.hero.leadMid}{' '}

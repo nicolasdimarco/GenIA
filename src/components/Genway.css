@@ -2,6 +2,10 @@
   background: var(--color-bg);
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .genway__bg {
@@ -36,6 +40,7 @@
 .genway .container {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 /* ================= FLOW DIAGRAM ================= */

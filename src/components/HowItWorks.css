@@ -1,5 +1,13 @@
 .howit {
   background: var(--color-bg-alt);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.howit .container {
+  width: 100%;
 }
 
 .howit__diagram {

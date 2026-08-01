@@ -1,0 +1,602 @@
+.genbase-page {
+  background: var(--color-bg);
+}
+
+/* ================= HERO ================= */
+.genbase-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.genbase-hero__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.genbase-hero__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.18;
+}
+
+.genbase-hero__orb--blue {
+  width: 600px;
+  height: 600px;
+  background: var(--color-blue);
+  top: -150px;
+  right: -150px;
+}
+
+.genbase-hero__orb--green {
+  width: 420px;
+  height: 420px;
+  background: var(--color-green);
+  bottom: -80px;
+  left: -100px;
+}
+
+.genbase-hero__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(150, 216, 253, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(150, 216, 253, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.genbase-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 820px;
+}
+
+.genbase-hero__badge-wrap {
+  margin-bottom: 1.5rem;
+}
+
+.genbase-hero__title {
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--color-blue) 20%, var(--color-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.genbase-hero__subtitle {
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 1.75rem;
+  line-height: 1.4;
+}
+
+.genbase-hero__lead {
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  max-width: 700px;
+}
+
+.genbase-hero__lead--muted {
+  opacity: 0.85;
+}
+
+.genbase-hero__lead--strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.genbase-hero__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+@media (max-width: 480px) {
+  .genbase-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .genbase-hero__actions .btn {
+    justify-content: center;
+  }
+}
+
+/* ================= SHARED SECTION LAYOUT ================= */
+.genbase-section {
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.genbase-section > .container {
+  width: 100%;
+}
+
+.genbase-section--alt {
+  background: var(--color-bg-alt);
+}
+
+.genbase-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.genbase-layout--reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.genbase-layout--reverse .genbase-layout__text {
+  order: 2;
+}
+
+.genbase-layout--reverse .genbase-card {
+  order: 1;
+}
+
+.genbase-layout__text .badge {
+  margin-bottom: 1rem;
+}
+
+.genbase-layout__text h2 {
+  margin-bottom: 1.5rem;
+}
+
+.genbase-layout__lead {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.genbase-layout__lead strong {
+  color: var(--color-blue);
+}
+
+.genbase-layout__body {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.genbase-layout__footer {
+  color: var(--color-text);
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .genbase-layout,
+  .genbase-layout--reverse {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .genbase-layout--reverse .genbase-layout__text,
+  .genbase-layout--reverse .genbase-card {
+    order: initial;
+  }
+}
+
+/* --- Card (reused for hub + data lake) --- */
+.genbase-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+}
+
+.genbase-card__title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-green);
+}
+
+.genbase-card--blue .genbase-card__title {
+  color: var(--color-blue);
+}
+
+.genbase-card__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.genbase-card__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+}
+
+.genbase-card__check {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 0.1rem;
+  background: rgba(91, 241, 117, 0.12);
+  color: var(--color-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(91, 241, 117, 0.3);
+}
+
+.genbase-card__check--blue {
+  background: rgba(150, 216, 253, 0.12);
+  color: var(--color-blue);
+  border: 1px solid rgba(150, 216, 253, 0.3);
+}
+
+/* --- Chips (RAG sources) --- */
+.genbase-subtitle {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.genbase-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+}
+
+.genbase-chip {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 9999px;
+  padding: 0.55rem 1.1rem;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.genbase-chip:hover {
+  border-color: rgba(150, 216, 253, 0.4);
+  transform: translateY(-2px);
+}
+
+.genbase-footnote {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+}
+
+/* ================= COLLABORATIVE ================= */
+.genbase-collab {
+  position: relative;
+  overflow: hidden;
+}
+
+.genbase-collab .container {
+  width: 100%;
+}
+
+.genbase-collab__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.genbase-collab__orb {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: var(--color-green);
+  filter: blur(100px);
+  opacity: 0.08;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.genbase-collab__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.genbase-collab__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(91, 241, 117, 0.1);
+  border: 1px solid rgba(91, 241, 117, 0.3);
+  color: var(--color-green);
+  margin-bottom: 1.25rem;
+}
+
+.genbase-collab__inner .badge {
+  margin-bottom: 1rem;
+}
+
+.genbase-collab__inner h2 {
+  margin-bottom: 1.25rem;
+}
+
+.genbase-collab__lead {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.genbase-collab__body {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.genbase-collab__footer {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* ================= PREDICTIVE GRID ================= */
+.genbase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.genbase-grid__card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 1.25rem 1.5rem;
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.genbase-grid__card:hover {
+  transform: translateY(-3px);
+}
+
+.genbase-grid__card--blue:hover {
+  border-color: rgba(150, 216, 253, 0.4);
+}
+
+.genbase-grid__card--green:hover {
+  border-color: rgba(91, 241, 117, 0.4);
+}
+
+.genbase-grid__icon {
+  flex-shrink: 0;
+  display: flex;
+}
+
+.genbase-grid__card--blue .genbase-grid__icon {
+  color: var(--color-blue);
+}
+
+.genbase-grid__card--green .genbase-grid__icon {
+  color: var(--color-green);
+}
+
+/* ================= WHY THIS MATTERS ================= */
+.genbase-why {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-bg-alt);
+}
+
+.genbase-why__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.genbase-why__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.1;
+}
+
+.genbase-why__orb--blue {
+  width: 480px;
+  height: 480px;
+  top: -100px;
+  right: -100px;
+  background: var(--color-blue);
+}
+
+.genbase-why__orb--green {
+  width: 420px;
+  height: 420px;
+  bottom: -100px;
+  left: -100px;
+  background: var(--color-green);
+}
+
+.genbase-why__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.genbase-why__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(150, 216, 253, 0.1);
+  border: 1px solid rgba(150, 216, 253, 0.3);
+  color: var(--color-blue);
+  margin-bottom: 1.25rem;
+}
+
+.genbase-why__inner .badge {
+  margin-bottom: 1rem;
+}
+
+.genbase-why__inner h2 {
+  margin-bottom: 1.75rem;
+}
+
+.genbase-why__items {
+  margin-bottom: 1.75rem;
+}
+
+.genbase-why__item {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.genbase-why__body {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+}
+
+.genbase-why__notool {
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.genbase-why__accent {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  line-height: 1.3;
+  background: linear-gradient(135deg, var(--color-blue) 30%, var(--color-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ================= FINAL CTA ================= */
+.genbase-cta {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.genbase-cta .container {
+  width: 100%;
+}
+
+.genbase-cta__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.genbase-cta__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.12;
+}
+
+.genbase-cta__orb--green {
+  width: 500px;
+  height: 500px;
+  background: var(--color-green);
+  bottom: -150px;
+  left: -100px;
+}
+
+.genbase-cta__orb--blue {
+  width: 400px;
+  height: 400px;
+  background: var(--color-blue);
+  top: -100px;
+  right: -100px;
+}
+
+.genbase-cta__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(150, 216, 253, 0.06), rgba(91, 241, 117, 0.05));
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: 3rem 2.5rem;
+}
+
+.genbase-cta__inner .badge {
+  margin-bottom: 1.25rem;
+}
+
+.genbase-cta__inner h2 {
+  margin-bottom: 1.25rem;
+}
+
+.genbase-cta__lead {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.genbase-cta__strong {
+  color: var(--color-text);
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 560px) {
+  .genbase-cta__inner {
+    padding: 2.25rem 1.5rem;
+  }
+}

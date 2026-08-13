@@ -35,6 +35,20 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <!-- Chainlit Copilot -->
+    <script src="https://chat.genia.coop/copilot/index.js"></script>
+    <script>
+      window.addEventListener("chainlit-call-fn", (e) => {
+        const { name, args, callback } = e.detail;
+        callback("You sent: " + args.msg);
+      });
+    </script>
+    <script>
+      window.mountChainlitWidget({
+        chainlitServer: "https://chat.genia.coop",
+        customCssUrl: "https://chat.genia.coop/public/custom.css",
+      });
+    </script>
   </body>
 </html>
 
